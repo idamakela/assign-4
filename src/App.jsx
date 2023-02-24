@@ -1,22 +1,27 @@
-import { useState } from 'react'
-import { FaDiceD20 } from 'react-icons/fa' //<FaDice20 /> to use in return html
+import { useState, useEffect } from 'react'
 import Header from './Header.jsx';
 import Footer from './Footer.jsx'
 
 function App() {
+    const [object, setObject] = useState([]);
 
-  return (
-    <>
-    <Header title={'Title'} subtitle={'Subtitle'} />
+    useEffect(() => {
+        fetch('https://collectionapi.metmuseum.org/public/collection/v1/objects')
+        
+    });
 
-    <main>
-        main element
-    </main>
+    return (
+        <>
+        <Header title={'Title'} subtitle={'Subtitle'} />
 
-    <Footer />
-    </>
+        <main>
+            main element
+        </main>
 
-  )
+        <Footer />
+        </>
+
+    )
 }
 
 export default App
