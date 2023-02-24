@@ -1,0 +1,1 @@
+DnD spell randomizer but improved, aka user can select class and level for randomized spell
