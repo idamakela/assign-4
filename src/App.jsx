@@ -4,6 +4,7 @@ import Footer from './Footer.jsx'
 import Object from './Object.jsx';
 
 function App() {
+    // API info: https://metmuseum.github.io/
     const API = 'https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=19/';
     const API_OBJECT = 'https://collectionapi.metmuseum.org/public/collection/v1/objects/260067'
     
