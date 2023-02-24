@@ -1,10 +1,9 @@
 import { useState } from 'react'
-import { FaDice20 } from 'react-icons/fa' //<FaDice20 /> to use in return html
+import { FaDiceD20 } from 'react-icons/fa' //<FaDice20 /> to use in return html
 import Header from './Header.jsx'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -54,9 +53,7 @@ function App() {
         </div>
     </main>
 
-    <footer>
-        <h2>&copy; Ida Mäkelä</h2>
-    </footer>
+
     </>
 
   )

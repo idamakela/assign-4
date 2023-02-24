@@ -1,4 +1,4 @@
-export default (title, subtitle) => {
+export default ({title, subtitle}) => {
     return (
         <header>
             <h1>{title}</h1>
