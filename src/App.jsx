@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import { FaDice20 } from 'react-icons/fa' //<FaDice20 /> to use in return html
 import Header from './Header.jsx'
 import './App.css'
 
