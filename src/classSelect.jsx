@@ -1,7 +1,7 @@
 export default () => {
     return(
         <>
-        <label for="class">I am a</label>
+        <label htmlFor="class">I am a</label>
 
         <select name="class" id="class">
             <option value="none" selected disabled hidden>class</option>
