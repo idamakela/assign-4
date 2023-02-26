@@ -6,6 +6,7 @@ import Object from './Object.jsx';
 function App() {
     // API info: https://metmuseum.github.io/
     const API = 'https://collectionapi.metmuseum.org/public/collection/v1/objects?departmentIds=19/';
+    const API_SEARCH = 'https://collectionapi.metmuseum.org/public/collection/v1/search?hasImages=true'
     const API_OBJECT = 'https://collectionapi.metmuseum.org/public/collection/v1/objects/'
     
     //first fetch API then randomise a number and feth the random number (aka index in the data) obejctId, then fetch the objects 
@@ -13,17 +14,20 @@ function App() {
     const [object, setObjects] = useState([]);
 
     useEffect(() => {
-        fetch(API)
+        fetch(API_SEARCH)
             .then((response) => {
                 return response.json()
             })
             .then((data) => {
-                const apiObject = (arr) => {
-                    return Math.floor(Math.random() * arr.length)
-                }
-                setData(data.objectIDs[apiObject(data.objectIDs)])
                 console.log(data)
-                console.log(currentData);
+
+                //for API 
+                // const apiObject = (arr) => {
+                //     return Math.floor(Math.random() * arr.length)
+                // }
+                // setData(data.objectIDs[apiObject(data.objectIDs)])
+                // console.log(data)
+                // console.log(currentData);
                 
 
                 //fetch object 
