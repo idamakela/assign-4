@@ -1,22 +1,11 @@
-export default ({ title: primaryImage, artistDisplayName, title, objectDate, medium, objectURL, artistWikidata_URL }) => {   
+export default ({ title: space_title, summary, url, publishedAt }) => {
+    console.log(article)
     return (
-        <div className="objectContainer">
-            <div className="imgContainer">
-                <img src={primaryImage} alt="pic" width="400px" height="400px"/>
-            </div>
-            <div className="textContainer">
-                <h3 className="artist">{artistDisplayName}</h3>
-                <h2 className="artPiece">{title}</h2>
-
-                <p className="desc">
-                    {`${objectDate} - ${medium}`}
-                </p>
-
-                <div className="linkContainer">
-                    <a href={objectURL} target="_blank">object</a>
-                    <a href={artistWikidata_URL} target="_blank">artist</a>
-                </div>
-            </div>
+        <div>
+        <h1>{space_title}</h1>
+        <p>{publishedAt}</p>
+        <p>{summary}</p>
+        <a href={url}>Länk</a >
         </div>
     )
 }
