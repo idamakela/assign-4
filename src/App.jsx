@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import Header from './Header.jsx';
 import Footer from './Footer.jsx'
-import ArticleComp from './Object.jsx';
+import ArticleComp from './Article.jsx';
 
 function App() {
     const API = 'https://api.spaceflightnewsapi.net/v3/articles';
