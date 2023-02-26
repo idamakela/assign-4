@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Bars } from 'react-loader-spinner'
 import Header from './Header.jsx';
 import Footer from './Footer.jsx'
 import ArticleComp from './Article.jsx';
@@ -24,10 +25,11 @@ function App() {
         <Header title={'Title'} subtitle={'Subtitle'} />
 
         <main> 
-            {articles.map((article) => {
-                <ArticleComp key={aricle.id} {...currentData}></ArticleComp>
-            })
-            }
+            {isLoading ?
+            <Bars /> :
+            articles.map((article) => {
+                return <ArticleComp key={article.id} {...article}></ArticleComp>
+            })}
         </main>
 
         <Footer />
