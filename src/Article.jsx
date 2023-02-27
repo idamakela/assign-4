@@ -6,7 +6,7 @@ export default ({ imageUrl, publishedAt, title, summary, url }) => {
     return (
         <div className="article-container">
             <div className="img-container">
-                <img src={imageUrl} alt="" width="342px" height="256px" />
+                <img src={imageUrl} alt="" width="400px" height="300px" />
             </div>
             <div className="text-container">
                 <p className="date">{date}</p>

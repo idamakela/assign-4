@@ -165,7 +165,7 @@ footer h2 {
 
     main {
         align-items: stretch;
-        padding: 0 12.2rem;
+        padding: 0 10rem;
     }
 
     .article-container {
@@ -173,14 +173,15 @@ footer h2 {
         flex-direction: row;
         height: 80vh;
         min-width: fit-content;
+        margin: 32px 0;
     }
 
     .article-container .text-container{
-        max-width: 50%;
+        max-width: 65%;
     }
 
-    .article-container .h2 {
-        font-size: 6rem;
+    .article-container h2 {
+        font-size: 5rem;
     }
 
     .article-container .btn a {
@@ -193,9 +194,11 @@ footer h2 {
     }
 
     .article-container .img-container {
-        height: 50%;
         margin-right: 40px;
-        width: 50%;
+        max-width: 550px;
+        max-height: 350px;
+        min-width: 550px;
+        min-height: 380px;
     }
 
     footer h2 {
