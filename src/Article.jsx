@@ -1,11 +1,21 @@
-export default ({ title: space_title, summary, url, publishedAt }) => {
-    console.log(article)
+import {format} from 'date-fns';
+
+export default ({ id: imageUrl, publishedAt, title, summary, url }) => {    
+    const date = format(new Date(publishedAt), 'yyyy-MM-dd H:m')
+    
     return (
-        <div>
-        <h1>{space_title}</h1>
-        <p>{publishedAt}</p>
-        <p>{summary}</p>
-        <a href={url}>Länk</a >
+        <div className="article-container">
+            <div className="img-container">
+                <img src={imageUrl} alt="" width="342px" height="256px" />
+            </div>
+            <div className="text-container">
+                <p className="date">{date}</p>
+                <h2>{title}</h2>
+                <p className="summary">{summary}</p>
+                <div className="btn">
+                    <a href={url} target="_blank">Read article</a >
+                </div>
+            </div>
         </div>
     )
 }
