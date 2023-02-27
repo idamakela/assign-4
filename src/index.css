@@ -95,7 +95,7 @@ footer h2 {
     height: 100%;
     border-radius: 24px;
     border-bottom: solid 1px  var(--second-color);
-    background-color: var(--second-color);
+    /* background-color: var(--second-color); */
 }
 
 .text-container {
@@ -132,6 +132,11 @@ footer h2 {
 .text-container .btn:hover {
     background-color: var(--text-color);
     color: var(--main-color);
+}
+
+.loader {
+    align-self: center;
+    justify-self: center;
 }
 
 @media screen and (min-width: 1200px) {

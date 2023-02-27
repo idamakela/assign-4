@@ -16,6 +16,7 @@ function App() {
                 return response.json()
             })
             .then((data) => {
+                console.log(data[0].imageUrl)
                 setIsLoading(false)
                 setArticles(data)
             })
@@ -25,12 +26,12 @@ function App() {
     return (
         <>
         <Header icon={<FaSplotch />} title={'SpaceNews'} menu={<FaFigma />}/>
-
+        
         <main> 
             {isLoading ?
             <Bars /> :
             articles.map((article) => {
-                return <ArticleComp key={article.id} {...article}></ArticleComp>
+                return <ArticleComp key={article.id} {...article} ></ArticleComp>
             })}
         </main>
 

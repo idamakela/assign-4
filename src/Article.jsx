@@ -1,7 +1,7 @@
 import {format} from 'date-fns';
 
-export default ({ id: imageUrl, publishedAt, title, summary, url }) => {    
-    const date = format(new Date(publishedAt), 'yyyy-MM-dd H:m')
+export default ({ imageUrl, publishedAt, title, summary, url }) => {    
+    const date = format(new Date(publishedAt), 'yyyy-MM-dd H:m');
     
     return (
         <div className="article-container">
