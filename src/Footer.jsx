@@ -1,7 +1,7 @@
 export default () => {
     return (
         <footer>
-            <h2>&copy; Ida Mäkelä</h2>
+            <h2><a href="https://github.com/idamakela" target="_blank">&copy; Ida Mäkelä</a></h2>
         </footer>
     )
 }

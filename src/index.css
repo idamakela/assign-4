@@ -1,11 +1,11 @@
 :root {
     --main-color: #FFFFFF;
     --second-color: #eff2f6;
-    --accent-color: #486284;
+    --accent-color: #111111;
+    --color-accent: #ff4655; 
 
     --text-color: #8ca2c0; 
-    --title-color: #486284;
-    --h1-color: #486284; 
+    --title-color: #111111;
 
     font-size: 10px;
     font-family: sans-serif;
@@ -39,6 +39,7 @@ h2 {
 
 main {
     align-items: center;
+    background-color: var(--main-color);
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -47,8 +48,9 @@ main {
 
 header {
     align-items: center;
+    background-color: var(--accent-color);
     border-bottom: solid 1px  var(--second-color);
-    color: var(--h1-color);
+    color: var(--main-color);
     display: flex;
     justify-content: space-between;
     padding: 17px 24px;
@@ -57,7 +59,7 @@ header {
 
 header a,
 header .icon {
-    color: var(--accent-color);
+    color: var(--color-accent);
     font-size: 2rem;
 }
 
@@ -79,8 +81,10 @@ footer {
     text-transform: capitalize;
 }
 
-footer h2 {
+footer h2 a {
     font-size: 1.8rem;
+    text-decoration: none;
+    color: var(--title-color);
 }
 
 .article-container {
@@ -114,7 +118,7 @@ footer h2 {
 }
 
 .text-container .btn {
-    background-color: var(--accent-color);
+    background-color: var(--color-accent);
     border-radius: 50em;
     display: flex;
     justify-content: center;
@@ -129,7 +133,7 @@ footer h2 {
 }
 
 .text-container .btn:hover {
-    background-color: var(--text-color);
+    background-color: var(--accent-color);
     color: var(--main-color);
 }
 
@@ -171,7 +175,7 @@ footer h2 {
     .article-container {
         align-items: center;
         flex-direction: row;
-        height: 80vh;
+        height: 90vh;
         min-width: fit-content;
         margin: 32px 0;
     }
@@ -199,6 +203,7 @@ footer h2 {
         max-height: 350px;
         min-width: 550px;
         min-height: 380px;
+        
     }
 
     footer h2 {

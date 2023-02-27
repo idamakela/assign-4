@@ -1,19 +1,17 @@
-import {format} from 'date-fns';
+export default ({ fullPortrait, developerName, displayName, description }) => {    
+    const agentInfo = displayName.toLowerCase();
 
-export default ({ imageUrl, publishedAt, title, summary, url }) => {    
-    const date = format(new Date(publishedAt), 'yyyy-MM-dd H:m');
-    
     return (
         <div className="article-container">
             <div className="img-container">
-                <img src={imageUrl} alt="" width="400px" height="300px" />
+                <img src={fullPortrait} alt="" width="400px" height="300px" />
             </div>
             <div className="text-container">
-                <p className="date">{date}</p>
-                <h2>{title}</h2>
-                <p className="summary">{summary}</p>
+                <p className="date">Dev: {developerName}</p>
+                <h2>{displayName}</h2>
+                <p className="summary">{description}</p>
                 <div className="btn">
-                    <a href={url} target="_blank">Read article</a >
+                    <a href={'https://playvalorant.com/en-us/agents/' + {agentInfo}} target="_blank">Read more</a >
                 </div>
             </div>
         </div>
