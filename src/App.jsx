@@ -13,31 +13,31 @@ function App() {
     useEffect(() => {
         fetch(API)
             .then((response) => {
-                return response.json()
+                if(!response.ok) {
+                    throw new Error(response.status);
+                } else {
+                    return response.json();
+                }
             })
             .then((data) => {
-                console.log(data[0].imageUrl)
-                setIsLoading(false)
-                setArticles(data)
+                setIsLoading(false);
+                setArticles(data);
             })
-            .catch((error) => console.error(error))
+            .catch((error) => console.error(error));
     }, []);
 
     return (
         <>
         <Header icon={<FaSplotch />} title={'SpaceNews'} menu={<FaFigma />}/>
-        
         <main> 
             {isLoading ?
             <Bars /> :
             articles.map((article) => {
-                return <ArticleComp key={article.id} {...article} ></ArticleComp>
+                return <ArticleComp key={article.id} {...article} />
             })}
         </main>
-
         <Footer />
         </>
-
     )
 }
 
